@@ -18,7 +18,7 @@ public class Driver {
 		// have to have one class per type of Object needed to be stored.
 		// Generics gives us this for free.
 		
-		Class baCls = BankAccount.class;
+		Class<BankAccount> baCls = BankAccount.class;
 		try {
 			
 			// 3. What is the cause of the problem reported by the compiler, if any?
@@ -44,14 +44,20 @@ public class Driver {
 			
 			// 5. What does the dynamic cast do here?
 			// 
-			// It casts the Object into BankAccount which then is instantiated 
-			// in memory with same meta-characteristics of the BankAccount class
+			// It casts the Object into BankAccount to allow BankAccount methods to be available.
 			//
 			// Is it the compiler that performs the cast operation or the Java runtime environment (JVM)?
-			// baCls is known by the compiler to always be a BankAccount.class, thus the 
-			// compiler 
-
-			System.out.println(myAccount.toString());
+			// baCls is dynamically casted thus done at run time.
+			//
+			// Is this code safe?
+			// Yes.
+			
+			// 6. Explain the compiler output? Are there errors? What is the reason? 
+			//    What does it say about the role of generics?
+			//
+			// The compiler compiles without any errors.
+			// Everything is cast correctly for the compiler at the type erasure point.
+			
 			aStorage.setValue(myAccount);
 			
 			// Deposit
@@ -61,8 +67,29 @@ public class Driver {
 		} catch ( IllegalAccessException e ) {
 			e.printStackTrace();
 		}
-		System.out.println(aStorage.x.showBalance());
-		System.out.println(sStorage.x);
+		System.out.println(aStorage.getValue().showBalance());
+		
+		if ( aStorage.getClass() == sStorage.getClass() ) {
+			System.out.println("EQUAL");
+		} else {
+			System.out.println("NOT EQUAL");
+		}
+		
+		// 7. What is the run-time output?
+		//
+		// Both classes are equal.
+		// The final balance of aStorage is 115.0, 
+		// this is the setValue(15) plus the initialised 100
+		//
+		//    Explain why you get such output and how does this relate to generics 
+		//    and their use with reflective instantiation of object?
+		//
+		// New BankAccount was instantiated and added to the storage with the default
+		// value of 100 as per the BankAccount constructor. Then a deposit of 15 was 
+		// made to the same account pointed to the storage reference.
+		// When retrieving the balance of the account set in the storage, we get the
+		// 100 plus the 15 = 115.
+		// 
 	}
 
 }
