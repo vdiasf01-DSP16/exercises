@@ -3,9 +3,7 @@
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
-.metadata/
-.recommenders/
-RemoteSystemsTempFiles/
+.settings/
 
 # Package Files #
 *.jar
