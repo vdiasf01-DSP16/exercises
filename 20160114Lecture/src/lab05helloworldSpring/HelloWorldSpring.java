@@ -10,11 +10,23 @@ import org.springframework.beans.factory.support.PropertiesBeanDefinitionReader;
 import lab04helloworldDecoupledInterfaceWithFactory.MessageProvider;
 import lab04helloworldDecoupledInterfaceWithFactory.MessageRenderer;
 
+/**
+ * Main class.
+ * 
+ * @author Vasco
+ *
+ */
 public class HelloWorldSpring {
-    
+   
+	/**
+	 * Main method
+	 * 
+	 * @param args
+	 * @throws Exception
+	 */
     public static void main(String[] args) throws Exception {
 
-        // get the bean factory
+        // The bean factory after loading the Properties.
         BeanFactory factory = getBeanFactory();
         
         MessageRenderer mr = (MessageRenderer) factory.getBean("renderer");
@@ -25,18 +37,17 @@ public class HelloWorldSpring {
     }
     
     private static BeanFactory getBeanFactory() throws Exception {
-        // get the bean factory - understanding DefaultListableBeanFactory(0
-    	// not really important.  It is just an Factory class example from
-    	// Spring.  
+    	// The DefaultListableBeanFactory
         DefaultListableBeanFactory factory = new DefaultListableBeanFactory();
         
-        // create a definition reader
+        // The definition reader
         PropertiesBeanDefinitionReader rdr = new PropertiesBeanDefinitionReader(factory);
         
-        // load the configuration options
+        // Pointing the properties to the beans.properties file configuration options
         Properties props = new Properties();
         props.load(new FileInputStream("/Users/Vasco/Desktop/DSPLectures - git/exercises/20160114Lecture/src/lab05helloworldSpring/beans.properties"));
 
+        // Regiester the Bead Definitions.
         rdr.registerBeanDefinitions(props);
         
         return factory;
