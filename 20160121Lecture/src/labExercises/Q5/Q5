@@ -1,0 +1,21 @@
+5. How can you prevent other developers from constructing new instances of your class? 
+  Provide appropriate examples to illustrate your answer.
+  
+   The answer is a singleton. Please see OnlyOneInstance.java
+   This class is instantiated once when first called. 
+   
+   As exemplified in Main, this is a thread safe example. 
+   When using a lazy-instantiation, e.g.: checking if the static instantiation field 
+   first and instantiating it after if NULL, is an opportunity for a threaded system 
+   to create multiple instances when starting-up.
+   
+   If the instance is for a very large object instantiation which may take a long time
+   to start-up, it will be chaos on a threaded system. Thus not safe.
+   
+   Only in a procedural system this may be safe, however, if again it will be instantiating
+   a very large chunk in memory, it will bring the system to a halt until the load is finished.
+   
+   Either way, singletons are bad in general, creating a funnel effect on any system 
+   that is built to grow. I cannot even start to imagine the problem it would create,
+   if the entry point to the cloud would be through a singleton handler in one particular server...
+   
