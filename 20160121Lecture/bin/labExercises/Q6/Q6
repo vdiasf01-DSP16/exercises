@@ -1,0 +1,19 @@
+6. Why might you decide to lazy-initialise a singleton instance rather than initialise it in 
+  its field declaration? Provide examples of both approaches to illustrate your answer.
+  
+  - For the singleton instantiated at the declaration field, 
+    please see Q5 example OnlyOneInstance.java
+
+  - For a lazy-instantiation, see OnlyOneInstance.java under this package.
+
+    The Main.java, tests this lazy-instantiation with threads and displays how many 
+    instantiations were created at the end.
+
+  CONCLUSION:
+    In my opinion, given that most systems are becoming multi-threaded, the lazy
+    instantiation singleton should be banned. The only benefits of a lazy instantiation would
+    maybe be on a non-threaded system, where it is required sparsely and it would be best to 
+    only instantiated it then. Exceptions should apply on cases when instantiation takes quite
+    some time to finish and the whole system goes to a halt waiting for it to finish...
+    Best approach for most cases where this has to be done in this way, should be to 
+    instantiate it at the start-up and have it ready for whenever it is required.

@@ -1,5 +1,5 @@
 5. How can you prevent other developers from constructing new instances of your class? 
-  Provide appropriate examples to illustrate your answer.
+  Provide appropriate examples to illustrate your answer.  
   
    The answer is a singleton. Please see OnlyOneInstance.java
    This class is instantiated once when first called. 
