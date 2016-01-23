@@ -13,13 +13,13 @@ public interface Changed extends Interface {
 	 * 
 	 * @param message
 	 */
-	public abstract void iHaveChanged(String message);
+	void iHaveChanged(String message);
 
 	/**
 	 * Returns the name given for this Changed implementation.
 	 * 
 	 * @return String
 	 */
-	public String getName();
+	String getName();
 	
 }

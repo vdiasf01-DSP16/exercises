@@ -13,7 +13,7 @@ import java.util.List;
  * @author Vasco
  *
  */
-public class Observable implements Runnable {
+public final class Observable implements Runnable {
 
 	/**
 	 * Singleton instance for this Observable class.
@@ -42,7 +42,7 @@ public class Observable implements Runnable {
 	 * 
 	 * @param changed
 	 */
-	public void subscribe(Changed changed) {
+	public void subscribe(final Changed changed) {
     	list.add(changed);
 		System.out.println("Added: '" + changed.getName() + "' to the list.");
 	}
@@ -52,7 +52,7 @@ public class Observable implements Runnable {
 	 * 
 	 * @param changed
 	 */
-	public void unSubscribe(Changed changed) {
+	public void unSubscribe(final Changed changed) {
     	list.remove(changed);
 		System.out.println("Removed: '" + changed.getName() + "' from the list.");
 	}

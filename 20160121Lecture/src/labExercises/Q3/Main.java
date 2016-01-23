@@ -12,13 +12,13 @@ public class Main implements Interface, Changed {
 	 * 
 	 * @param args
 	 */
-	public static void main(String[] args) {
+	public static void main(final String[] args) {
 		// Start the Observable in a new thread.
 		new Thread(Observable.getInstance()).start();
 		
 		// Start the Main
-		Main m = new Main();
-		m.call();
+		final Main main = new Main();
+		main.call();
 	}
 	
 	/**
