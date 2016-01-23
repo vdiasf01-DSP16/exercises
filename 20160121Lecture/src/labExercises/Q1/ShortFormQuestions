@@ -1,8 +1,9 @@
 1. Write down three differences between abstract classes and interfaces in Java 8. 
    Provide examples to illustrate your answer. 
 
-  a) A class can extend only one abstract class 
+  a) A class / abstract class, can extend only one class / abstract class 
      but it can implement multiple interfaces.
+  
   b) - Abstract methods on abstract classes are equivalent to
        declared methods on Interfaces: 
        * both must have implementations on the extending/implementing class *
