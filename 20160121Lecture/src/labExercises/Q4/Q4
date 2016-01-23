@@ -1,0 +1,10 @@
+4. What is the value of a stub class like WindowAdapter which is composed 
+  of methods that do nothing?
+  
+  An Interface implementations, forces the implementation to have all methods implemented. 
+  A stub implementation, overrides all methods with a minimum implementation possible
+  such that when one requires to only override one method, it can use the adapter, and 
+  override the needed method, knowing that all the others will be stubbed.
+  
+  It allows developer to write less code every time only one method of the WL is required
+  to be overridden.
