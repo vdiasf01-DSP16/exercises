@@ -1,0 +1,9 @@
+ 3. Provide an example of an interface with methods that do not imply responsibility on the 
+    part of the implementing class to take action on behalf of the caller or to return a value. 
+    
+
+   See Main iHaveChanged() implementation from the Changed interface, which will be called by
+   the Observer whenever the Observer wants. The message passed in by the Observer is then 
+   printed by Main.    
+
+   Observer and Main do not wait on each other.
