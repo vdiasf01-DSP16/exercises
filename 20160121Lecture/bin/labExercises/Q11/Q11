@@ -1,0 +1,14 @@
+11. If you want to direct output to System.out instead of to a file, 
+    you can create a Writer object that directs its output to System.out:
+
+        Writer out = new PrintWriter(System.out);
+
+    Write a code example to define a Writer object that wraps text at 15 characters, 
+    centres the text, sets the text to random casing, and directs the output to 
+    System.out. Which design pattern are you using?
+    
+    - Decorator pattern, which will add on top of the original object the extra requirements. 
+      These may not always come in the same order or even all at the same time.
+    
+    
+    Don't understand how to do this... 
