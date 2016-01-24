@@ -1,0 +1,4 @@
+10. What are the signs that a Factory Method is at work?
+
+   - Whenever the returned class is not always known, or it comes
+     encapsulated in a generic type interface
