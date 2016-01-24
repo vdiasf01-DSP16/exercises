@@ -1,0 +1,11 @@
+9. Provide examples of two commonly used Java methods that return a new object.
+
+  - Reflection - example MainReflection.java showing reflection instantiating a class by name.
+  
+  - Direct Injection - example MainBeanFactory.java,
+    using Beans and Spring through the Spring.xml definitions file defining which class 
+    to instantiate and with which values. Spring.xml can be extended with as many class 
+    names as needed and the MainBeanFactory.java only needs to call them by the ID alias 
+    given by the Spring.xml, being oblivious to what implementation will come out of it
+    or with initialised values for each properties. It is with the developer to know what
+    type of Object will be returned to then be casted correctly.
