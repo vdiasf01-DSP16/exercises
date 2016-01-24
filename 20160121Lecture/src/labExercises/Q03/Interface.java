@@ -1,4 +1,4 @@
-package labExercises.Q3;
+package labExercises.Q03;
 
 /**
  *  3. Provide an example of an interface with methods that do not imply 

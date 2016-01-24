@@ -1,4 +1,4 @@
-package labExercises.Q3;
+package labExercises.Q03;
 
 /**
  * Interface Changed known by the Observer the the only method the Observer

@@ -1,4 +1,4 @@
-package labExercises.Q3;
+package labExercises.Q03;
 
 /**
  * Main implementing an Interface.
