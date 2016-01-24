@@ -1,4 +1,4 @@
-package labExercises.Q1;
+package labExercises.Q01;
 
 public class Q1aMain {
 

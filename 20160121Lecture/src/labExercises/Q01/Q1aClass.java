@@ -1,4 +1,4 @@
-package labExercises.Q1;
+package labExercises.Q01;
 
 /**
  * A class can extend only from one abstract class but can implement 

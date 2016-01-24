@@ -1,0 +1,19 @@
+2. Are the following true or false? 
+
+  (a) Every interface must have at least one method. 
+      FALSE 
+      - An interface can have no methods. e.g.: InterfaceNoMethods.java
+      
+  (b) An interface can declare instance fields that an implementing class 
+      must also declare. 
+      FALSE 
+      - Interfaces can have static instance fields but does not allow to have
+      private instance fields. Attempting to the latter will create a compiler error.
+      e.g.: InterfaceInstanceFields.java
+      
+  (c) Although you can't instantiate an interface, an interface definition can 
+      declare constructor methods that require an implementing class to provide 
+      constructors with given signatures. Provide examples to illustrate your answers. 
+      FALSE 
+      - Interface cannot declare and or implement constructors. 
+      e.g.: InterfaceWithConstructor.java
