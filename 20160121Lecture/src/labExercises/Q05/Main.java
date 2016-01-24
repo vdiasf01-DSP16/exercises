@@ -1,4 +1,4 @@
-package labExercises.Q5;
+package labExercises.Q05;
 
 import java.util.LinkedList;
 import java.util.List;

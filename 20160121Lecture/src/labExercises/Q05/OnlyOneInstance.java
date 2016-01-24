@@ -1,4 +1,4 @@
-package labExercises.Q5;
+package labExercises.Q05;
 
 /**
  * This is the class that must prevent other developers from
