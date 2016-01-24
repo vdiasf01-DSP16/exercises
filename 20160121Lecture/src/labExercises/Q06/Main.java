@@ -1,10 +1,10 @@
-package labExercises.Q6;
+package labExercises.Q06;
 
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 
-import labExercises.Q6.OnlyOneInstance;
+import labExercises.Q06.OnlyOneInstance;
 
 /**
  * The Main class to test lazy-instantiation.

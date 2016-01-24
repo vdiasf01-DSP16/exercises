@@ -1,4 +1,4 @@
-package labExercises.Q6;
+package labExercises.Q06;
 
 import lombok.Synchronized;
 
