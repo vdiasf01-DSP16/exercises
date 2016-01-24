@@ -1,4 +1,4 @@
-package labExercises.Q7;
+package labExercises.Q07;
 
 import java.util.Observable;
 import java.util.Observer;

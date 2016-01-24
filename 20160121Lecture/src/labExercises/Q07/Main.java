@@ -1,4 +1,4 @@
-package labExercises.Q7;
+package labExercises.Q07;
 
 /**
  * Main class to answer question seven.
