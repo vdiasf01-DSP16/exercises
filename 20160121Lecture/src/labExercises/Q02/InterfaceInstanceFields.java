@@ -1,4 +1,4 @@
-package labExercises.Q2;
+package labExercises.Q02;
 
 /**
  * Example of an Interface attempting to assign
