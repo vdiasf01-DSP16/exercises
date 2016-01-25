@@ -1,15 +1,12 @@
 package labExercises.Q11;
 
-import java.io.PrintWriter;
-import java.io.Writer;
-
 /**
- * Center decoration to be applied to the main decorating Writer class.
+ * Centre decoration to be applied to the main decorating Writer class.
  * 
  * @author Vasco
  *
  */
-public class DecoratedWriterCenter extends MainDecoratingWriter implements Decorate {
+public class DecoratedWriterCenter implements MainDecoratingInterface {
 	
 	/**
 	 * The max text width.
@@ -17,21 +14,10 @@ public class DecoratedWriterCenter extends MainDecoratingWriter implements Decor
 	private final int MAX_TEXT_WITH = 64;
 
 	/**
-	 * Constructor
-	 * 
-	 * @param out
-	 */
-	public DecoratedWriterCenter(Writer out) {
-		super(new PrintWriter(out));
-		super.appendDecoration(this);
-	}
-
-	/**
 	 * Centre the text within a default 64 string long.
 	 */
 	@Override
-	public void decorate() { 
-		System.out.println("Decorate text: '"+text+"' - Center.");
+	public String decorate(String text) { 
 		int textLengh = text.length();
 		int spaceLeft = MAX_TEXT_WITH - textLengh;
 		if ( spaceLeft > 0 ) {
@@ -55,6 +41,6 @@ public class DecoratedWriterCenter extends MainDecoratingWriter implements Decor
 				text += " ";
 			}
 		}
-		System.out.println("Decorated: '"+text+"' - Wrap.");
+		return text;
 	}
 }

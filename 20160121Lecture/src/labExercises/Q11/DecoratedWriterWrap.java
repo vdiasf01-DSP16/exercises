@@ -1,35 +1,43 @@
 package labExercises.Q11;
 
-import java.io.PrintWriter;
-import java.io.Writer;
-
 /**
  * Wrapper decoration to be applied to the main decorating Writer class.
  * 
  * @author Vasco
  *
  */
-public class DecoratedWriterWrap extends MainDecoratingWriter implements Decorate {
-	
+public class DecoratedWriterWrap implements MainDecoratingInterface {
+
 	/**
-	 * Constructor
-	 * 
-	 * @param out
+	 * The wrap size to be used on the given text.
 	 */
-	public DecoratedWriterWrap(Writer out) {
-		super(new PrintWriter(out));
-		super.appendDecoration(this);
+	private final int wrapSize;
+
+	/**
+	 * Default constructor applying size 15.
+	 */
+	public DecoratedWriterWrap() {
+		this.wrapSize = 15;
 	}
 
 	/**
-	 * Wrap the text to 15 char.
+	 * Constructor accepting a size length.
+	 * 
+	 * @param wrapAt
+	 */
+	public DecoratedWriterWrap(int wrapAt) {
+		this.wrapSize = wrapAt;
+	}
+
+	/**
+	 * Cut the text off to 15 characters only.
 	 */
 	@Override
-	public void decorate() { 
-		System.out.println("Decorate text: '"+text+"' - Wrap.");
-		if ( text != null && text.length() > 15 ) {
-			super.text = this.text.substring(0, 15);
+	public String decorate(String text) { 
+		if ( text != null && text.length() > wrapSize ) {
+			text = text.substring(0, wrapSize);
 		}
-		System.out.println("Decorated: '"+text+"' - Wrap.");
+		return text;
 	}
+
 }

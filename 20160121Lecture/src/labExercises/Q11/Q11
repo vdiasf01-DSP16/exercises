@@ -10,5 +10,12 @@
     - Decorator pattern, which will add on top of the original object the extra requirements. 
       These may not always come in the same order or even all at the same time.
     
+    * Main applies the principle and executes the code.
+    * MaiDecoratinWriter class extends PrintWriter and is the one driving the decoration.
+    * MainDecoratingInterface class with only one method to execute the decoration
+
+    * DecoratedWriterCenter class will centre the text into a 64 character text.
+    * DecoratedWriterRandomCasing will randomly apply upper / lower cases to each text char.
+    * DecoratedWriterWrap will wrap the text to 15 chars bt default or any other length supplied.
     
-    Don't understand how to do this... 
+    

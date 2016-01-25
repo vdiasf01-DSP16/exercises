@@ -6,23 +6,25 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * The main abstract decorator class other decorators will extend.
+ * The main class extending the PrintWriter and will execute all 
+ * the requested decorations appended.
  * 
- * This only extends PrintWriter class and overrides some of the 
- * methods to allow the decoration to happen.
+ * PrintWriter write and flush is overridden such that we carry 
+ * the supplied text available to apply the decorations in the
+ * order these were given.
  * 
  * @author Vasco
  *
  */
-public abstract class MainDecoratingWriter extends PrintWriter implements Decorate {
+public class MainDecoratingWriter extends PrintWriter {
 
 	/**
 	 * List of all the requested decorations.
 	 */
-	protected List<MainDecoratingWriter> list = new LinkedList<>();
+	protected List<MainDecoratingInterface> list = new LinkedList<>();
 	
 	/**
-	 * The actual test to be sent.
+	 * The actual test to be sent out.
 	 */
 	protected String text = "";
 	
@@ -36,21 +38,21 @@ public abstract class MainDecoratingWriter extends PrintWriter implements Decora
 	}
 
 	/**
-	 * Append a new Decoration to the final process.
-	 * 
-	 * @param decoration
-	 */
-	public void appendDecoration(MainDecoratingWriter decoration) {
-		list.add(decoration);
-	}
-	
-	/**
 	 * Overriding the write to not write until 
 	 * all decorations have happened.
 	 */
 	@Override
 	public void write( String text ) {
-		this.text = text;
+		this.text += text;
+	}
+
+	/**
+	 * Append supplied decoration to the list of all decorations.
+	 * 
+	 * @param MainDecoratingInterface decoration
+	 */
+	public void appendDecoration(MainDecoratingInterface decoration) {
+		list.add(decoration);
 	}
 
 	/**
@@ -59,11 +61,17 @@ public abstract class MainDecoratingWriter extends PrintWriter implements Decora
 	 */
 	@Override
 	public void flush() { 
-		for( MainDecoratingWriter mdw : list ) {
-			mdw.decorate();
+		for( MainDecoratingInterface mdw : list ) {
+			text = mdw.decorate(text);
 		}
-		System.out.println("Decorations applied. Text: '" + text + "'");
-//		super.write(text);
-//	    super.flush();
+		super.write(text);
+	    super.flush();
+	}
+	
+	/**
+	 * Resets the appended list of decorations.
+	 */
+	public void reset() {
+		list = new LinkedList<>();
 	}
 }
