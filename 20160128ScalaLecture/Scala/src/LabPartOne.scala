@@ -59,6 +59,25 @@ object partOneExpressions {
     println("It is not sunny")
   }
 
+  // 3
+  sky = "partly cloudy"
+  temperature = 18
+  def isSunny3(sky: String, temperature: Integer) : Boolean = {
+    if ( ( sky.toLowerCase().equals("sunny")
+        || sky.toLowerCase().equals("partly cloudy") )
+        && ( temperature > 80 || temperature < 20 ) 
+    ) {
+      return true
+    }
+    return false
+  }
+
+  if ( isSunny3(sky, temperature) ) {
+      println("It is sunny")
+  } else {
+    println("It is not sunny")
+  }
+
 }
 
 object main {
