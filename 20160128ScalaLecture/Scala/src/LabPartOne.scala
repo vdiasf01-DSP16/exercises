@@ -27,8 +27,8 @@ object partOneREPL {
 object partOneExpressions {
   // 1
   var sky : String = "Sunny"
-  var temperature : Integer = 85
-  def isSunny1(sky: String, temperature: Integer) : Boolean = {
+  var temperature : Double = 85.4
+  def isSunny1(sky: String, temperature: Double) : Boolean = {
     if ( sky.toLowerCase().equals("sunny") && temperature > 80 ) {
       return true
     }
@@ -44,7 +44,7 @@ object partOneExpressions {
   // 2
   sky = "partly cloudy"
   temperature = 85
-  def isSunny2(sky: String, temperature: Integer) : Boolean = {
+  def isSunny2(sky: String, temperature: Double) : Boolean = {
     if ( ( sky.toLowerCase().equals("sunny")
         || sky.toLowerCase().equals("partly cloudy") )
         && temperature > 80 ) {
@@ -62,7 +62,7 @@ object partOneExpressions {
   // 3
   sky = "partly cloudy"
   temperature = 18
-  def isSunny3(sky: String, temperature: Integer) : Boolean = {
+  def isSunny3(sky: String, temperature: Double) : Boolean = {
     if ( ( sky.toLowerCase().equals("sunny")
         || sky.toLowerCase().equals("partly cloudy") )
         && ( temperature > 80 || temperature < 20 ) 
@@ -77,6 +77,12 @@ object partOneExpressions {
   } else {
     println("It is not sunny")
   }
+
+  // 4
+  def fahrenheitToCelsius(fahren: Double) : Double = {
+    return ( fahren - 32 ) * 5 / 9     
+  } 
+  println("Fahrenheit 45 = " + fahrenheitToCelsius(45) + " C")
 
 }
 
