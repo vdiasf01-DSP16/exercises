@@ -127,11 +127,36 @@ object partOneMethods {
   assert("123123" == m2, "Expected '123123' and got: '"+m2+"'")
 }
 
+// Classes & Objects - question 1
+object Range {
+  val step = 3 // step must be initialised
+  println(step)
+}
+
+object Range2 { // Cannot have two objects with the same name
+  val step = 2
+  println(step)
+}
+
+// 3
+object s1 { var s1 : String = "Sally" }
+object s2 { var s2 : String = "Sally" }
+
+object partOneClassesMethods {
+    Range
+    Range2
+//    assert(s1.equals(s2), "s1 and s2 are NOT equal, different object references")
+//    assert(s2.equals(s1), "s1 and s2 are NOT equal, deifferen object references")
+    assert(s2.s2.equals(s1.s1), "s1 and s2 are NOT equal, different string values")
+  
+}
+
 object main {
   def main(args: Array[String]): Unit = {
- //   partOneREPL
+//    partOneREPL
 //    partOneExpressions
-    partOneMethods
+//    partOneMethods
+    partOneClassesMethods
   }
     
 }
