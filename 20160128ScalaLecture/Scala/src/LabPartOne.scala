@@ -92,10 +92,27 @@ object partOneExpressions {
 
 }
 
+object partOneMethods {
+  def getSquare(number : Int) : Double = {
+    return number * number
+  }
+  
+  val a = getSquare(3)
+  assert(a == 9);
+  
+  val b = getSquare(6)
+  assert(b == 6*6);
+  
+  val c = getSquare(5)
+  assert(c == 25);
+  
+}
+
 object main {
   def main(args: Array[String]): Unit = {
  //   partOneREPL
-    partOneExpressions
+//    partOneExpressions
+    partOneMethods
   }
     
 }
