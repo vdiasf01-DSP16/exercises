@@ -93,19 +93,24 @@ object partOneExpressions {
 }
 
 object partOneMethods {
-  def getSquare(number : Int) : Double = {
-    return number * number
-  }
-  
+  def getSquare(x : Int) : Int = x * x  
+  // 1
   val a = getSquare(3)
   assert(a == 9);
-  
   val b = getSquare(6)
   assert(b == 6*6);
-  
   val c = getSquare(5)
   assert(c == 25);
+
+  def isArg1GreaterThanArg2(arg1 : Double, arg2 : Double) : Boolean = {
+    if ( arg1 > arg2 ) { return true }
+    return false
+  }
   
+  val t1 = isArg1GreaterThanArg2(4.1, 4.12)
+  assert(!t1)
+  val t2 = isArg1GreaterThanArg2(2.1, 1.2)
+  assert(t2)
 }
 
 object main {
