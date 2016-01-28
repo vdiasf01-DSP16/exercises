@@ -79,10 +79,16 @@ object partOneExpressions {
   }
 
   // 4
-  def fahrenheitToCelsius(fahren: Double) : Double = {
+  def FahrenheitToCelcius(fahren: Double) : Double = {
     return ( fahren - 32 ) * 5 / 9     
   } 
-  println("Fahrenheit 45 = " + fahrenheitToCelsius(45) + " C")
+  println("Fahrenheit 45 = " + FahrenheitToCelcius(45) + " C")
+
+  // 5
+  def CelciusTofahrenheit(celcius: Double) : Double = {
+    return ( celcius * 9 / 5 ) + 32     
+  } 
+  println("Celcius 45 = " + CelciusTofahrenheit(45) + " F")
 
 }
 
