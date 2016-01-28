@@ -1,5 +1,5 @@
 
-object partOne {
+object partOneREPL {
     // The REPL
     // 1
     val value = 17
@@ -24,9 +24,28 @@ object partOne {
     println(questionFive);
 }
 
+object partOneExpressions {
+  val sky : String = "Sunny"
+  val temperature : Integer = 85
+  def isSunny(sky: String, temperature: Integer) : Boolean = {
+    if ( sky.equals("sunny") && temperature > 80 ) {
+      return true
+    }
+    return false
+  }
+
+  if ( isSunny(sky, temperature) ) {
+      println("It is sunny")
+  } else {
+    println("It is not sunny")
+  }
+  
+}
+
 object main {
   def main(args: Array[String]): Unit = {
-    partOne
+ //   partOneREPL
+    partOneExpressions
   }
     
 }
