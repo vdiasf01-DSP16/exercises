@@ -1,8 +1,5 @@
 
-
-object main {
-  def main(args: Array[String]): Unit = {
-    
+object partOne {
     // The REPL
     // 1
     val value = 17
@@ -25,6 +22,12 @@ object main {
     // 5
     val questionFive = 15.56
     println(questionFive);
+}
+
+object main {
+  def main(args: Array[String]): Unit = {
+    partOne
   }
+    
 }
 
