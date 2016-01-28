@@ -102,6 +102,7 @@ object partOneMethods {
   val c = getSquare(5)
   assert(c == 25);
 
+  // 2
   def isArg1GreaterThanArg2(arg1 : Double, arg2 : Double) : Boolean = {
     if ( arg1 > arg2 ) { return true }
     return false
@@ -111,6 +112,19 @@ object partOneMethods {
   assert(!t1)
   val t2 = isArg1GreaterThanArg2(2.1, 1.2)
   assert(t2)
+  
+  // 3
+  def manyTimesString(str : String, x : Int) : String = {
+    var string : String = ""
+    for( i <- 1 to x ) {
+      string += str
+    }
+    return string
+  }
+  val m1 = manyTimesString("abc", 3)
+  assert("abcabcabc" == m1, "Expected 'abcabcabc' and got: '"+m1+"'")
+  val m2 = manyTimesString("123", 2)
+  assert("123123" == m2, "Expected '123123' and got: '"+m2+"'")
 }
 
 object main {
