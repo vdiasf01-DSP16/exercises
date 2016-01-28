@@ -25,21 +25,40 @@ object partOneREPL {
 }
 
 object partOneExpressions {
-  val sky : String = "Sunny"
-  val temperature : Integer = 85
-  def isSunny(sky: String, temperature: Integer) : Boolean = {
-    if ( sky.equals("sunny") && temperature > 80 ) {
+  // 1
+  var sky : String = "Sunny"
+  var temperature : Integer = 85
+  def isSunny1(sky: String, temperature: Integer) : Boolean = {
+    if ( sky.toLowerCase().equals("sunny") && temperature > 80 ) {
       return true
     }
     return false
   }
 
-  if ( isSunny(sky, temperature) ) {
+  if ( isSunny1(sky, temperature) ) {
       println("It is sunny")
   } else {
     println("It is not sunny")
   }
-  
+
+  // 2
+  sky = "partly cloudy"
+  temperature = 85
+  def isSunny2(sky: String, temperature: Integer) : Boolean = {
+    if ( ( sky.toLowerCase().equals("sunny")
+        || sky.toLowerCase().equals("partly cloudy") )
+        && temperature > 80 ) {
+      return true
+    }
+    return false
+  }
+
+  if ( isSunny2(sky, temperature) ) {
+      println("It is sunny")
+  } else {
+    println("It is not sunny")
+  }
+
 }
 
 object main {
