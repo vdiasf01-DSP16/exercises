@@ -129,7 +129,7 @@ object partOneMethods {
 
 // Classes & Objects - question 1
 object Range {
-  val step = 3 // step must be initialised
+  val step = 2 // step must be initialised
   println(step)
 }
 
@@ -139,15 +139,15 @@ object Range2 { // Cannot have two objects with the same name
 }
 
 // 3
-object s1 { var s1 : String = "Sally" }
-object s2 { var s2 : String = "Sally" }
+object s1 { var s : String = "Sally" }
+object s2 { var s : String = "Sally" }
 
 object partOneClassesMethods {
     Range
     Range2
 //    assert(s1.equals(s2), "s1 and s2 are NOT equal, different object references")
-//    assert(s2.equals(s1), "s1 and s2 are NOT equal, deifferen object references")
-    assert(s2.s2.equals(s1.s1), "s1 and s2 are NOT equal, different string values")
+//    assert(s2.equals(s1), "s1 and s2 are NOT equal, different object references")
+//    assert(s2.s.equals(s1.s), "s1 and s2 are NOT equal, different string values")
   
 }
 
