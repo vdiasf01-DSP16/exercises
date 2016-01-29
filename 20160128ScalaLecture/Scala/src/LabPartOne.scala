@@ -221,12 +221,18 @@ object fieldsInClasses {
 //  println
 
   // 2 - changed Cup to not allow go below zero
+//  val cup = new Cup
+//  val list = List.apply(45, -55, 10, -9,  -2)
+//  for(i <- list) {
+//    cup.add(i)
+//    println("Max: " + cup.max + " %full: " + cup.percentFull)
+//  }
+  
+  // 3 Assigning percentFull from outside the class
   val cup = new Cup
-  val list = List.apply(45, -55, 10, -9,  -2)
-  for(i <- list) {
-    cup.add(i)
-    println("Max: " + cup.max + " %full: " + cup.percentFull)
-  }
+  cup.percentFull = 56
+  println("Max: " + cup.max + " %full: " + cup.percentFull)
+  
 }
 
 object main {
