@@ -15,4 +15,12 @@ class Cup {
     }
     percentFull
   }
+  
+  def get() : Int = {
+    return percentFull
+  }
+  
+  def set(percent:Int) = {
+    percentFull = percent
+  }
 }

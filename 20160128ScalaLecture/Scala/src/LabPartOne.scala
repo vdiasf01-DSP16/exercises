@@ -229,9 +229,15 @@ object fieldsInClasses {
 //  }
   
   // 3 Assigning percentFull from outside the class
-  val cup = new Cup
-  cup.percentFull = 56
-  println("Max: " + cup.max + " %full: " + cup.percentFull)
+//  val cup = new Cup
+//  cup.percentFull = 56
+//  println("Max: " + cup.max + " %full: " + cup.percentFull)
+
+  // 4 getter and setter for percentFull
+    val cup = new Cup
+    cup.set(56)
+    println("cup.get() is " + cup.get())
+
   
 }
 
