@@ -151,13 +151,35 @@ object partOneClassesMethods {
   
 }
 
+object creatinClasses {
+  // 1
+  var hippo = new Hippo
+  var lion = new Lion
+  var tiger = new Tiger
+  var monkey = new Monkey
+  var giraffe = new Giraffe
+  println("Hippo new instance memory address: " + hippo)
+  println("Lion new instance memory address: " + lion)
+  println("Tiger new instance memory address: " + tiger)
+  println("Monkey new instance memory address: " + monkey)
+  println("Giraffe new instance memory address: " + giraffe)
+  
+  // 2
+  var lion1 = new Lion
+  var giraffe1 = new Giraffe
+  var giraffe2 = new Giraffe
+  println("Lion1 new instance memory address: " + lion1)
+  println("Giraffe1 new instance memory address: " + giraffe1)
+  println("Giraffe2 new instance memory address: " + giraffe2)
+}
+
 object main {
   def main(args: Array[String]): Unit = {
 //    partOneREPL
 //    partOneExpressions
 //    partOneMethods
-    partOneClassesMethods
+//    partOneClassesMethods
+      creatinClasses
   }
     
 }
-
