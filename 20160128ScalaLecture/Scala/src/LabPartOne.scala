@@ -209,6 +209,16 @@ object assertingSignal {
   assert(flare == "Flare used!", "Expected Flare used! Got " + flare)
 }
 
+
+object fieldsInClasses {
+  val cup = new Cup
+  var list = List.apply(45, -15, -50)
+  for(i <- list) {
+    cup.add(i)
+    println("Max: " + cup.max + " %full: " + cup.percentFull)
+  }
+}
+
 object main {
   def main(args: Array[String]): Unit = {
 //    partOneREPL
@@ -218,7 +228,8 @@ object main {
 //    creatinClasses
 //    assertingSailboat
 //    assertingFlare
-    assertingSignal
+//    assertingSignal
+    fieldsInClasses
   }
     
 }
