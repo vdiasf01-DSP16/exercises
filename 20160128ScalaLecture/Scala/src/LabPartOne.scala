@@ -211,8 +211,18 @@ object assertingSignal {
 
 
 object fieldsInClasses {
+  // 1
+//  val cup = new Cup
+//  var list = List.apply(45, -15, -50)
+//  for(i <- list) {
+//    cup.add(i)
+//    println("Max: " + cup.max + " %full: " + cup.percentFull)
+//  }
+//  println
+
+  // 2 - changed Cup to not allow go below zero
   val cup = new Cup
-  var list = List.apply(45, -15, -50)
+  val list = List.apply(45, -55, 10, -9,  -2)
   for(i <- list) {
     cup.add(i)
     println("Max: " + cup.max + " %full: " + cup.percentFull)

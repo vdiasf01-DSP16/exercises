@@ -8,6 +8,11 @@ class Cup {
     if(percentFull > max) {
       percentFull = max
     }
+    // Q2 - ensuring percentFull 
+    // never goes below zero
+    if( percentFull < 0 ) {
+      percentFull = 0
+    }
     percentFull
   }
 }
