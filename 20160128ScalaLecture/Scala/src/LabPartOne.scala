@@ -193,6 +193,11 @@ object assertingSailboat {
   
 }
 
+object assertingFlare {
+  val flare = new Flare
+  val f1 = flare.light()
+  assert(f1 == "Flare used!", "Expecgted Flare used!, Got " + f1)
+}
 object main {
   def main(args: Array[String]): Unit = {
 //    partOneREPL
@@ -200,7 +205,8 @@ object main {
 //    partOneMethods
 //    partOneClassesMethods
 //    creatinClasses
-    assertingSailboat
+//    assertingSailboat
+    assertingFlare
   }
     
 }
