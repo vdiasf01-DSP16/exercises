@@ -76,7 +76,6 @@ object argh {
   }
 }
 
-
 object q10 {
   var person = new Person("John","Mathews")
   var alien = new Alien
@@ -84,8 +83,21 @@ object q10 {
   alien.greet(new Giraffe("Graciosa","Stretched"))
 }
 
+object test11 {
+  def re() : Int = {0}
+  def re(x : Int) : Int = { x * x }
+}
+object q11 {
+  // Cannot use methods like values
+//  test11.re() = 3
+  // Methods return values from expressions either 
+  // passed it on calculated withing the object
+  println(test11.re( 2*2 ))
+}
+
 object exercises {
   def main(args: Array[String]) : Unit = {
     q1; q2; q3; q4; q5; q6; q7; q8; q9; q10;
+    q11;
   }
 }
