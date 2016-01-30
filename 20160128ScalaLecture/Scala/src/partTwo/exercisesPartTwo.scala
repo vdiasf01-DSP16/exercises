@@ -3,30 +3,24 @@ package partTwo
 // Integer, Boolean, Long, Double
 object q1 {
   var list = List(42, true, 123L, 42.0);
-  list foreach( (x) =>
-    println("The type of '"+x+"' is: "+x.getClass())
-  )
+  list foreach( (x) => println("The type of '"+x+"' is: "+x.getClass()))
 }
 
 // Character and String
 object q2 {
   var list = List('a', "a");
-  list foreach( (x) =>
-    println("The type of '"+x+"' is: "+x.getClass())
-  )
+  list foreach( (x) => println("The type of '"+x+"' is: "+x.getClass()) )
 }
   
 // String and Unit
 object q3 {
   var list = List("Hello world", println("Hello world"));
-  list foreach( (x) =>
-    println("The type of '"+x+"' is: "+x.getClass())
-  )
+  list foreach( (x) => println("The type of '"+x+"' is: "+x.getClass()) )
 }
 
 object q4 {
   // Single quotes are for characters, not strings
-//  var list = List('Hello world');
+  // var list = List('Hello world');
 }
 
 object q5 {
@@ -62,6 +56,7 @@ object q8 {
 object q9 {
   argh.c + argh.b + argh.a
 }
+
 object argh {
   // a
   def a = {
@@ -81,8 +76,16 @@ object argh {
   }
 }
 
+
+object q10 {
+  var person = new Person("John","Mathews")
+  var alien = new Alien
+  println("Greet() returning type is: "+ alien.greet(person).getClass())
+  alien.greet(new Giraffe("Graciosa","Stretched"))
+}
+
 object exercises {
   def main(args: Array[String]) : Unit = {
-    q1; q2; q3; q4; q5; q6; q7; q8; q9;
+    q1; q2; q3; q4; q5; q6; q7; q8; q9; q10;
   }
 }

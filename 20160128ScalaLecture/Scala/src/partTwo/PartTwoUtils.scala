@@ -9,6 +9,4 @@ class PartTwoUtils {
   // q8
   def calc2(num : Int) : Int = { num * num }
   def calc2(num : Double) : Double = { num * num }
-
-  
 }
