@@ -1,5 +1,4 @@
 
-import scala.annotation.elidable
 import scala.annotation.elidable.ASSERTION
 
 object partOneREPL {
@@ -241,6 +240,30 @@ object fieldsInClasses {
   
 }
 
+
+object vectors {
+  // 1
+  var v1 = (0, 1, 2, 3, 4 );
+  var v2 = ("0", "1", "2", "3", "4")
+  var v3 = (0, "1", 2, "3", 4)
+
+  // 2
+  var v4 = ( v1, v2, v3 )
+  
+  // 3
+  var vector = List("The", "dog", "visited", "the", "fire", "station")
+
+  // Printing each element of the vector
+  for( x <- vector ) println(x)
+
+  // Making a string from the vector with a space between elements
+  val sentence = vector.mkString(" ")
+
+  println("sentence.toString() is '" + sentence.toString() + "'")
+  
+}
+
+
 object main {
   def main(args: Array[String]): Unit = {
 //    partOneREPL
@@ -251,7 +274,8 @@ object main {
 //    assertingSailboat
 //    assertingFlare
 //    assertingSignal
-    fieldsInClasses
+//    fieldsInClasses
+    vectors
   }
     
 }
