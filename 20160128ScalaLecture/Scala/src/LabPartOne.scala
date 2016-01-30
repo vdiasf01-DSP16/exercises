@@ -1,5 +1,5 @@
 
-import scala.annotation.elidable.ASSERTION
+
 
 object partOneREPL {
     // The REPL
@@ -254,13 +254,22 @@ object vectors {
   var vector = List("The", "dog", "visited", "the", "fire", "station")
 
   // Printing each element of the vector
-  for( x <- vector ) println(x)
+//  for( x <- vector ) println(x)
 
   // Making a string from the vector with a space between elements
   val sentence = vector.mkString(" ")
 
-  println("sentence.toString() is '" + sentence.toString() + "'")
+//  println("sentence.toString() is '" + sentence.toString() + "'")
   
+  // 4
+  var vectorInt = Vector(0, 1, 2, 3)
+  var vectorDouble = Vector(1.2, 1.3, 2.4, 3.54)
+  println("Int Sum: " +vectorInt.sum)
+  println("Int Min: " +vectorInt.min)
+  println("Int Max: " +vectorInt.max)
+  println("Double Sum: " + vectorDouble.sum)
+  println("Double Min: " + vectorDouble.min)
+  println("Double Max: " + vectorDouble.max)
 }
 
 
