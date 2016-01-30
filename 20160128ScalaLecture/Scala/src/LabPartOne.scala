@@ -1,4 +1,8 @@
+import scala.Vector
+import scala.annotation.elidable
+import scala.annotation.elidable.ASSERTION
 
+import com.atomicscala.AtomicTest
 
 
 object partOneREPL {
@@ -262,14 +266,27 @@ object vectors {
 //  println("sentence.toString() is '" + sentence.toString() + "'")
   
   // 4
-  var vectorInt = Vector(0, 1, 2, 3)
-  var vectorDouble = Vector(1.2, 1.3, 2.4, 3.54)
-  println("Int Sum: " +vectorInt.sum)
-  println("Int Min: " +vectorInt.min)
-  println("Int Max: " +vectorInt.max)
-  println("Double Sum: " + vectorDouble.sum)
-  println("Double Min: " + vectorDouble.min)
-  println("Double Max: " + vectorDouble.max)
+//  var vectorInt = Vector(0, 1, 2, 3)
+//  var vectorDouble = Vector(1.2, 1.3, 2.4, 3.54)
+//  println("Int Sum: " +vectorInt.sum)
+//  println("Int Min: " +vectorInt.min)
+//  println("Int Max: " +vectorInt.max)
+//  println("Double Sum: " + vectorDouble.sum)
+//  println("Double Min: " + vectorDouble.min)
+//  println("Double Max: " + vectorDouble.max)
+  
+  // 5
+  var myVector1 = Vector(1, 2, 3, 4, 5, 6)
+  var myVector2 = Vector(1.0, 2.0, 3.0, 4.0, 5.0, 6.0)
+
+  // Comparing the value for each vector on same indexes
+  ( 1 to myVector1.length - 1 ) foreach ( (x) => {
+      AtomicTest.any2Atomic(myVector1(x)).is(myVector2(x))
+    }
+  )
+  
+  // Comparing the vector lengths is same
+  AtomicTest.any2Atomic(myVector1.length).is(myVector2.length)
 }
 
 
