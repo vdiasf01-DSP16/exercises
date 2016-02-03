@@ -35,9 +35,6 @@ public class HelloWorldSpringWithDI {
 
     /**
      * The Bean factory.
-     * 
-     * @return BeanFactory
-     * @throws Exception
      */
     private static BeanFactory getBeanFactory() throws Exception {
         // get the bean factory
