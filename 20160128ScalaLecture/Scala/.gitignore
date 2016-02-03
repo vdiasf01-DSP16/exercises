@@ -1,5 +1,6 @@
 *.class
 *.project
+.cache-main
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
@@ -8,6 +9,7 @@
 .recommenders/
 RemoteSystemsTempFiles/
 .classpath
+.settings
 
 # Package Files #
 *.jar
