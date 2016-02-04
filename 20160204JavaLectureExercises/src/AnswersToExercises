@@ -5,3 +5,7 @@ Q1 a) The Strategy Design Pattern defines behavioural procedures for an operatio
       same type of interface. For instance, an Interface Duck can have operation fly to ducks 
       but a different implementation on fly for e.g.: rubber ducks
 
+Q3 Abstract Factory is great for when is required to implement many factories under one roof.
+   A top abstract class will be the roof giving shelter to all the other factories that will
+   extend from this one. This will allow the caller to call upon any of the children factories.
+   
