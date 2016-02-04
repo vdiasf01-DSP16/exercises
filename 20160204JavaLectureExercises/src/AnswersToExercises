@@ -9,3 +9,6 @@ Q3 Abstract Factory is great for when is required to implement many factories un
    A top abstract class will be the roof giving shelter to all the other factories that will
    extend from this one. This will allow the caller to call upon any of the children factories.
    
+Q5 Modularity expresses a range of setters and getters to allow a more specific tailored change
+   on the initialised object, to avoid the construction bloat, as in adding all the required 
+   fields to be given at the construction point.
