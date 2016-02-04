@@ -1,0 +1,7 @@
+Q1 a) The Strategy Design Pattern defines behavioural procedures for an operation depending
+      on the behavioural implementation used.
+      
+   b) This pattern is appropriate to be used when one requires different behaviours for one
+      same type of interface. For instance, an Interface Duck can have operation fly to ducks 
+      but a different implementation on fly for e.g.: rubber ducks
+
