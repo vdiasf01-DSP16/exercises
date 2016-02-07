@@ -28,6 +28,13 @@ public class CarDirector {
 	 * supplied by the underlying classes.
 	 */
 	public void build() {
-		this.carBuilder.getCar();
+		Car car = carBuilder.getCar();
+		car.setBodyStyle(carBuilder.getBodyStyle());
+		car.setPower(carBuilder.getPower());
+		car.setEngine(carBuilder.getEngine());
+		car.setBreaks(carBuilder.getBreaks());
+		car.setSeats(carBuilder.getSeats());
+		car.setWindows(carBuilder.setWindows());
+		car.setFuelType(carBuilder.setFuelType());
 	}
 }
