@@ -80,7 +80,7 @@ public class SedanCarBuilder implements CarBuilder {
 	 * {@inheritDoc}
 	 */
 	@Override
-	public String setWindows() {
+	public String getWindows() {
 		return "Laminated side windows.Fixed rear window with defroste";
 	}
 
@@ -88,7 +88,7 @@ public class SedanCarBuilder implements CarBuilder {
 	 * {@inheritDoc}
 	 */
 	@Override
-	public String setFuelType() {
+	public String getFuelType() {
 		return "Diesel 19 MPG city, 29 MPG highway, 23 MPG combined and 437 mi. range";
 	}
 }

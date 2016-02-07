@@ -34,7 +34,7 @@ public class CarDirector {
 		car.setEngine(carBuilder.getEngine());
 		car.setBreaks(carBuilder.getBreaks());
 		car.setSeats(carBuilder.getSeats());
-		car.setWindows(carBuilder.setWindows());
-		car.setFuelType(carBuilder.setFuelType());
+		car.setWindows(carBuilder.getWindows());
+		car.setFuelType(carBuilder.getFuelType());
 	}
 }

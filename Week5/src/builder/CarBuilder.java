@@ -55,13 +55,13 @@ public interface CarBuilder {
 	 * 
 	 * @return String 
 	 */
-	public String setWindows();
+	public String getWindows();
 
 	/**
 	 * Fuel type car attribute.
 	 * 
 	 * @return String 
 	 */
-	public String setFuelType();
+	public String getFuelType();
 	
 }

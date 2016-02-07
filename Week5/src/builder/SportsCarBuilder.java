@@ -26,7 +26,7 @@ public class SportsCarBuilder implements CarBuilder {
 	}
 
 	/**
-	 * The build car of type Sedan.
+	 * The build car of type Sport.
 	 */
 	@Override
 	public Car getCar() {
@@ -82,7 +82,7 @@ public class SportsCarBuilder implements CarBuilder {
 	 * {@inheritDoc}
 	 */
 	@Override
-	public String setWindows() {
+	public String getWindows() {
 		return "Front windows with one-touch on two windows";
 	}
 
@@ -90,7 +90,7 @@ public class SportsCarBuilder implements CarBuilder {
 	 * {@inheritDoc}
 	 */
 	@Override
-	public String setFuelType() {
+	public String getFuelType() {
 		return "Petrol 17 MPG city, 28 MPG highway, 20 MPG combined and 380 mi. range";
 	}
 }
