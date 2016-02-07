@@ -17,4 +17,7 @@ Q7 The Facade pattern hides complexity from the client and is best used when req
    create very complex objects, because it makes it much simpler to call these, hindering
    any extra initialisations required, etc...
    
+Q9 The Bridge pattern design is used to decouple an abstraction from an interface 
+   implementations such that both the interface and the abstraction can change without 
+   affecting each other directly like interfaces and implementations do.
  
