@@ -1,23 +1,33 @@
-Q1 a) The Strategy Design Pattern defines behavioural procedures for an operation depending
-      on the behavioural implementation used.
+Q01 a) The Strategy Design Pattern defines behavioural procedures for an operation depending
+       on the behavioural implementation used.
       
-   b) This pattern is appropriate to be used when one requires different behaviours for one
-      same type of interface. For instance, an Interface Duck can have operation fly to ducks 
-      but a different implementation on fly for e.g.: rubber ducks
+    b) This pattern is appropriate to be used when one requires different behaviours for one
+       same type of interface. For instance, an Interface Duck can have operation fly to ducks 
+       but a different implementation on fly for e.g.: rubber ducks
 
-Q3 Abstract Factory is great for when is required to implement many factories under one roof.
-   A top abstract class will be the roof giving shelter to all the other factories that will
-   extend from this one. This will allow the caller to call upon any of the children factories.
+Q03 Abstract Factory is great for when is required to implement many factories under one roof.
+    A top abstract class will be the roof giving shelter to all the other factories that will
+    extend from this one. This will allow the caller to call upon any of the children factories.
    
-Q5 Modularity expresses a range of setters and getters to allow a more specific tailored change
-   on the initialised object, to avoid the construction bloat, as in adding all the required 
-   fields to be given at the construction point.
+Q05 Modularity expresses a range of setters and getters to allow a more specific tailored change
+    on the initialised object, to avoid the construction bloat, as in adding all the required 
+    fields to be given at the construction point.
    
-Q7 The Facade pattern hides complexity from the client and is best used when required to
-   create very complex objects, because it makes it much simpler to call these, hindering
-   any extra initialisations required, etc...
+Q07 The Facade pattern hides complexity from the client and is best used when required to
+    create very complex objects, because it makes it much simpler to call these, hindering
+    any extra initialisations required, etc...
    
-Q9 The Bridge pattern design is used to decouple an abstraction from an interface 
-   implementations such that both the interface and the abstraction can change without 
-   affecting each other directly like interfaces and implementations do.
- 
+Q09 The Bridge pattern design is used to decouple an abstraction from an interface 
+    implementations such that both the interface and the abstraction can change without 
+    affecting each other directly like interfaces and implementations do.
+
+Q10 a) The Composite pattern allow the creation of composite groups of components in a tree
+       type of structure, made easily accessible.
+    b) Whenever a complex structure is required with different single or group kind of note
+       and whenever it is also required some easy access to each group or single components.
+    c) The four participants are: 
+       1 - The component abstract class
+       2 - The composite component dealing with a group of components extending 
+           the abstract class
+       3 - The individual component extending the abstract class
+       4 - The main class storing all this information.
