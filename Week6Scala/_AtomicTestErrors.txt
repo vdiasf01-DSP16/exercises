@@ -1,2 +1,14 @@
 3[Error] expected:
 4
+()[Error] expected:
+4
+()[Error] expected:
+3.3
+()[Error] expected:
+530
+()[Error] expected:
+4
+()[Error] expected:
+3.3
+()[Error] expected:
+530

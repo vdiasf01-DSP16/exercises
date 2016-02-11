@@ -9,6 +9,7 @@ class Planet(name: String, description : String, moons: Int) {
   }
 }
 
+
 object test8 extends App {
   val p = new Planet(name = "Mercury",
     description = "small and hot planet",
@@ -23,3 +24,4 @@ object test8 extends App {
   AtomicTest.any2Atomic(earth.hasMoon).is(true)  
   
 }
+
