@@ -12,3 +12,51 @@
 3.3
 ()[Error] expected:
 530
+()[Error] expected:
+Earl Grey
+()[Error] expected:
+0
+()[Error] expected:
+Lemon Zinger decaf
+()[Error] expected:
+0
+()[Error] expected:
+Jasmine Green + sugar
+()[Error] expected:
+16
+()[Error] expected:
+Earl Grey + milk + sugar
+()[Error] expected:
+116
+Lemon Zinger[Error] expected:
+Lemon Zinger decaf
+Jasmine Green[Error] expected:
+Jasmine Green + sugar
+0[Error] expected:
+16
+Earl Grey[Error] expected:
+Earl Grey + milk + sugar
+0[Error] expected:
+116
+Jasmine Green[Error] expected:
+Jasmine Green + sugar
+0[Error] expected:
+16
+Earl Grey[Error] expected:
+Earl Grey + milk + sugar
+0[Error] expected:
+116
+0[Error] expected:
+16
+Earl Grey + sugar[Error] expected:
+Earl Grey + milk + sugar
+0[Error] expected:
+116
+0[Error] expected:
+16
+0[Error] expected:
+116
+0[Error] expected:
+16
+0[Error] expected:
+116
