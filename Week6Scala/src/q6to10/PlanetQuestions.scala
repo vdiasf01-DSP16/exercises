@@ -15,4 +15,11 @@ object test8 extends App {
     moons = 0)
   
   AtomicTest.any2Atomic(p.hasMoon).is(false)  
+  
+  val earth = new Planet( moons = 1,
+      name = "Earth",
+      description = "a hospitable planet")
+  
+  AtomicTest.any2Atomic(earth.hasMoon).is(true)  
+  
 }
