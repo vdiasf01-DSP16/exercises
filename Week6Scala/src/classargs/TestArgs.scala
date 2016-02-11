@@ -10,6 +10,9 @@ object TestArgs extends App {
   val family2 = new Family("Dad", "Mom", "Harry")
   AtomicTest.any2Atomic(family2.familySize()).is(3)
   
+  AtomicTest.any2Atomic(family1.squareThem(2)).is(4)
+  AtomicTest.any2Atomic(family1.squareThem(2, 4)).is(20)
+  AtomicTest.any2Atomic(family1.squareThem(1, 2, 4)).is(21)
   
 }
 
@@ -20,6 +23,12 @@ class Family (mum: String, dad: String, kids: String*) {
       count += 1
     }
     return count
+  }
+  
+  def squareThem(num: Int*) : Integer = { 
+    var result = 0
+    for( int <- num ) result += (int * int)
+    return result
   }
   
 }
