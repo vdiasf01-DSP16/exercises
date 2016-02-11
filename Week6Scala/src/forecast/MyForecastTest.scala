@@ -3,7 +3,7 @@ package forecast
 import com.atomicscala.AtomicTest
 
 object MyForecastTest extends App {
-  var sunnyData = List(
+  var sunnyData = Vector(
       ( 100, "Sunny" ), 
       ( 80, "Mostly Sunny" ),
       ( 50, "Partly Sunny" ),
@@ -23,11 +23,13 @@ object MyForecastTest extends App {
   AtomicTest.any2Atomic(forecast(15)).is("Unknown")
   
   def forecast(temp: Int) : String = {
-    if( temp == 100 ) return "Sunny"
-    if( temp == 80 ) return "Mostly Sunny"
-    if ( temp == 50 ) return "Partly Sunny"
-    if ( temp == 20 ) return "Mostly Cloudy"
-    if ( temp == 0 ) return "Cloudy"
-    return "Unknown"
+    temp match {
+      case 100 => "Sunny"
+      case 80 => "Mostly Sunny"
+      case 50 => "Partly Sunny"
+      case 20 => "Mostly Cloudy"
+      case 0 => "Cloudy"
+      case _ => "Unknown"
+    }
   }
 }
