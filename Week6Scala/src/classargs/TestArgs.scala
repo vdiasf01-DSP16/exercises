@@ -13,10 +13,13 @@ object TestArgs extends App {
   
 }
 
-class Family (names: String*) {
+class Family (mum: String, dad: String, kids: String*) {
   def familySize() : Integer = {
-    val size : Integer = names.length;
-    return size
+    var count = 2 // mum and dad
+    for(x <- kids) {
+      count += 1
+    }
+    return count
   }
   
 }
