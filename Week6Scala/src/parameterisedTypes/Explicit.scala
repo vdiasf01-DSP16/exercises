@@ -24,6 +24,10 @@ case class ParameterisedTypes() {
     v.toList
   }
   
+  // Explicit return Set
+  def explicitSet(v: Vector[Double]) : Set[Double] = {
+    v.toSet
+  }
 }
 
 object testParameterisedTypes extends App {
@@ -32,4 +36,9 @@ object testParameterisedTypes extends App {
   AtomicTest.any2Atomic(ParameterisedTypes().explicitDouble(1.0, 2.0, 3.0)).is(Vector(1.0, 2.0, 3.0))
   AtomicTest.any2Atomic(ParameterisedTypes().explicitList(Vector(10.0, 20.0))).is(List(10.0, 20.0))
   AtomicTest.any2Atomic(ParameterisedTypes().explicitList(Vector(1, 2, 3))).is(List(1.0, 2.0, 3.0))
+
+  AtomicTest.any2Atomic(ParameterisedTypes().explicitSet(Vector(10.0, 20.0, 10.0))).is(Set(10.0, 20.0))
+  AtomicTest.any2Atomic(ParameterisedTypes().explicitSet(Vector(1, 2, 3, 2, 3, 4))).is(Set(1.0, 2.0, 3.0, 4.0))
+
+
 }
