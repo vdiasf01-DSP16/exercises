@@ -22,3 +22,11 @@ Person(WrappedArray(Ron, House, ron@house.com))[Error] expected:
 Person(Ron,House,ron@house.com)
 Person(WrappedArray(Sally, Dove, sally@dove.com))[Error] expected:
 Person(Sally,Dove,sally@dove.com)
+()[Error] expected:
+1,2,3,4,
+()[Error] expected:
+1,2,3,4,
+()[Error] expected:
+1,2,3,4,
+1.0,2.0,3.0,4.0,[Error] expected:
+1,2,3,4,
