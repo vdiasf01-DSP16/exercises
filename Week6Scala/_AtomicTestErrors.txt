@@ -16,3 +16,9 @@ Smile[Error] expected:
 Jane
 jane@smile.com[Error] expected:
 Smile
+Person(WrappedArray(Jane, Smile, jane@smile.com))[Error] expected:
+Person(Jane,Smile,jane@smile.com)
+Person(WrappedArray(Ron, House, ron@house.com))[Error] expected:
+Person(Ron,House,ron@house.com)
+Person(WrappedArray(Sally, Dove, sally@dove.com))[Error] expected:
+Person(Sally,Dove,sally@dove.com)
