@@ -19,12 +19,17 @@ case class ParameterisedTypes() {
     Vector(d1, d2, d3) 
   }
   
+  // Explicit return List
+  def explicitList(v: Vector[Double]): List[Double] = { 
+    v.toList
+  }
+  
 }
 
 object testParameterisedTypes extends App {
   AtomicTest.any2Atomic(ParameterisedTypes().inferred('a', 'b', 'c')).is("Vector(a, b, c)") 
-  AtomicTest.any2Atomic(ParameterisedTypes().explicit('a', 'b', 'c')).is("Vector(a, b, c)") 
-  
+  AtomicTest.any2Atomic(ParameterisedTypes().explicit('a', 'b', 'c')).is("Vector(a, b, c)")   
   AtomicTest.any2Atomic(ParameterisedTypes().explicitDouble(1.0, 2.0, 3.0)).is(Vector(1.0, 2.0, 3.0))
-
+  AtomicTest.any2Atomic(ParameterisedTypes().explicitList(Vector(10.0, 20.0))).is(List(10.0, 20.0))
+  AtomicTest.any2Atomic(ParameterisedTypes().explicitList(Vector(1, 2, 3))).is(List(1.0, 2.0, 3.0))
 }
