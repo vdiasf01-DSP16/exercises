@@ -11,4 +11,9 @@ object TestDogYears extends App {
   v.foreach(x => s+=dogYears(x)+" ") 
   AtomicTest.any2Atomic(s).is("7 35 49 56 ")
   
+  s = "" 
+  val numbers = Vector(1, 2, 5, 3, 7) 
+  numbers.foreach(x => s+=x*x+" ") 
+  AtomicTest.any2Atomic(s).is("1 4 25 9 49 ")
+
 }
