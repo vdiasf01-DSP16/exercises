@@ -6,7 +6,7 @@ class ClothesWasher( var modelName : String, var capacity: Double) {
     var blah : String = "32" 
   }
   def this(model: String) = {
-    var error : String = "primary constructor first" 
+//    var error : String = "primary constructor first" 
     this(model, 0)
   }
   def this(capa: Double) = this("Default", capa)
