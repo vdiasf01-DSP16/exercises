@@ -30,3 +30,9 @@ Person(Sally,Dove,sally@dove.com)
 1,2,3,4,
 1.0,2.0,3.0,4.0,[Error] expected:
 1,2,3,4,
+Vector(1, 2, 3, 4)[Error] expected:
+Vector(21, 32, 43, 54)
+Vector(1, 2, 3, 4)[Error] expected:
+Vector(21, 32, 43, 54)
+Vector(1, 2, 3, 4)[Error] expected:
+Vector(21, 32, 43, 54)
