@@ -1,8 +1,14 @@
 package auxiliaryConstructors
 
 class ClothesWasher( var modelName : String, var capacity: Double) {
-  def this() = this("Default", 0)
-  def this(model: String) = this(model, 0)
+  def this() = {
+    this("Default", 0)
+    var blah : String = "32" 
+  }
+  def this(model: String) = {
+    var error : String = "primary constructor first" 
+    this(model, 0)
+  }
   def this(capa: Double) = this("Default", capa)
 
   override def toString() : String = {
