@@ -12,6 +12,7 @@ class Reduce() {
   }
 }
 
+// Q28 & 29
 object testReduce extends App {
   var r = new Reduce()
   AtomicTest.any2Atomic(r.sumIt(1,2,3)).is(6)
