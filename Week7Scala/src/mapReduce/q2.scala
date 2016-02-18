@@ -7,7 +7,7 @@ object q2 extends App {
   
   AtomicTest.any2Atomic(v.map( n => n + 1 )).is(Vector(2, 3, 4, 5))
 
-  // For.. mor complicated and prone to errors..
+  // For.. more complicated and prone to errors..
   var newVector = v
   var index = 0
   for(n <- v) { 
