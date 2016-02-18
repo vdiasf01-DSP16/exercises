@@ -16,7 +16,7 @@ object testAnswers extends App {
   // For.. mor complicated and prone to errors..
   var newVector = v
   var index = 0
-  for(n <- newVector) { 
+  for(n <- v) { 
     newVector = newVector updated (index, (10 * ( n + 1 ) + n))
     index += 1
   }
