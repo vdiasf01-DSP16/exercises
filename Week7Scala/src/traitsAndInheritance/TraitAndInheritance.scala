@@ -1,4 +1,4 @@
-package mapReduce
+package traitsAndInheritance
 
 sealed trait Shape {
   var colour : Colour
