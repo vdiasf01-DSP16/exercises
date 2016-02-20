@@ -10,6 +10,25 @@ sealed trait Rectangular extends Shape {
   override def sides() : Int = 4 
 }
 
+sealed trait Colour {
+  var Red : Int
+  var Green : Int
+  var Blue : Int
+  var Light : Boolean
+
+  def apply(colour: String) {
+    colour match {
+      case "Red"    => { Red = 255; Green = 0;   Blue = 0   }
+      case "Yellow" => { Red = 255; Green = 255; Blue = 0   }
+      case "Pink"   => { Red = 255; Green = 127; Blue = 127 }
+    }
+  }
+  def apply(red: Int, green: Int, blue: Int) { Red = red; Green = green; Blue = blue }
+  def light(light: Boolean) { Light = true }
+  def dark(dark: Boolean) { Light = false }
+}
+
+
 final case class Circle(var radius: Double) extends Shape {
     override def sides() : Int = 1 
     override def perimeter() : Double = radius * 2 * Math.PI
