@@ -37,8 +37,22 @@ sealed trait Colour {
   val colour : String
   val dark : Boolean = false
   override def toString() : String = { 
-    if ( colour.length() > 0 ) colour
-    else "RBG["+r+","+b+","+b+"]"
+    this match {
+      case ColourBuilder(r,g,b,name,dark) => {
+        if ( colour.length() > 0 ) {
+          if ( dark ) "dark - " + colour 
+          else "light - " + colour
+        }
+        else {
+          if ( dark ) "dark RBG["+r+","+b+","+b+"]"
+          else "light RBG["+r+","+b+","+b+"]"
+        }
+      }
+      case _ => {
+        if ( colour.length() > 0 ) colour 
+          else "RBG["+r+","+b+","+b+"]"
+      }        
+    }
   }
 }
 
@@ -74,12 +88,12 @@ final case class Red() extends Colour {
   override val dark = false
 }
 
-final case class ColourBuilder(red:Int,green:Int,blue:Int,name:String,isLight:Boolean) extends Colour {
+final case class ColourBuilder(red:Int,green:Int,blue:Int,name:String,isDark:Boolean) extends Colour {
   override val r = red
   override val g = green
   override val b = blue
   override val colour = name
-  override val dark = !isLight
+  override val dark = isDark
   
 }
 
