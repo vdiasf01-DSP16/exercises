@@ -7,21 +7,26 @@ sealed trait Shape {
   def area : Double
 }
 
-final case class Square(var size: Double) extends Shape {
-    override def sides() : Int = 4 
-    override def perimeter() : Double = size * 4
-    override def area() : Double = size * size
+sealed trait Rectangular extends Shape {
+  override def sides() : Int = 4 
+  this match {
+    case Square(size)             => Square(size)
+    case Rectangle(width, height) => Rectangle(width,height)
+  }
 }
 
 final case class Circle(var radius: Double) extends Shape {
     override def sides() : Int = 1 
     override def perimeter() : Double = radius * 2 * Math.PI
     override def area() : Double = radius * radius * Math.PI
-  
 }
 
-final case class Rectangle(var width: Double, var height: Double) extends Shape {
-    override def sides() : Int = 4 
+final case class Square(var size: Double) extends Rectangular {
+    override def perimeter() : Double = size * 4
+    override def area() : Double = size * size
+}
+
+final case class Rectangle(var width: Double, var height: Double) extends Rectangular {
     override def perimeter() : Double = ( width + height ) * 2
     override def area() : Double = width * height  
 }
