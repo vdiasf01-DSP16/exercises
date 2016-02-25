@@ -1,6 +1,6 @@
 package q1
 
-sealed trait IntList
-final case object End extends IntList
-final case class Pair(head: Int, tail: IntList) extends IntList
+sealed trait LinkedList[T]
+final case object End extends LinkedList[T]
+final case class Pair(head: Int, tail: LinkedList[T]) extends LinkedList[T]
 
