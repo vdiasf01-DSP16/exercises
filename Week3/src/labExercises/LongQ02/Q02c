@@ -1,0 +1,5 @@
+In the cases when the getInstance() will not be called too frequently,
+the synchronized is not a problem. E.g.: Whenever the the singleton
+is attempting to get a database handler. Systems should only acquire a
+database handler once which starting up and then only attempt again 
+if the connection was closed.

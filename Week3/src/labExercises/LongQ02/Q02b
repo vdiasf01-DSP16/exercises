@@ -1,0 +1,2 @@
+On a multi-threaded system, synchronized created a funnel which stops 
+the system from being fully multi-threaded at that point.
