@@ -3,7 +3,8 @@
   by use of an appropriate example.
   
   The above statement is TRUE.
-  MVC ( Model View Controller ) is supported by the Observer pattern as follows:
+  MVC ( Method View and Controller ) is translated to the Observer pattern as
+  follows:
    - View : The Observer after a message was sent from the Observable.
    - Controller : The setChanged() which will then send the update to all Observers.
-   - Model : the update() method that will send from the Observable to the Observer the update.
+   - Method : the update() method that will send from the Observable to the Observer the update.

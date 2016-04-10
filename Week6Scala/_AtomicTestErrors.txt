@@ -36,29 +36,3 @@ Vector(1, 2, 3, 4)[Error] expected:
 Vector(21, 32, 43, 54)
 Vector(1, 2, 3, 4)[Error] expected:
 Vector(21, 32, 43, 54)
-()[Error] expected:
-Vector(21, 32, 43, 54)
-Vector(1, 2, 3, 4)[Error] expected:
-Vector(21, 32, 43, 54)
-()[Error] expected:
-Vector(21, 32, 43, 54)
-()[Error] expected:
-Vector(21, 32, 43, 54)
-()[Error] expected:
-Vector(21, 32, 43, 54)
-()[Error] expected:
-Vector(21, 32, 43, 54)
-()[Error] expected:
-Vector(21, 32, 43, 54)
-Vector()[Error] expected:
-Vector(21, 32, 43, 54)
-()[Error] expected:
-Vector(21, 32, 43, 54)
-Vector()[Error] expected:
-Vector(21, 32, 43, 54)
-List()[Error] expected:
-Vector(21, 32, 43, 54)
-Vector()[Error] expected:
-Vector(21, 32, 43, 54)
-Vector()[Error] expected:
-Vector(21, 32, 43, 54)
