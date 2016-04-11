@@ -2,6 +2,7 @@ package parameterisedTypes
 
 import scala.Vector
 import com.atomicscala.AtomicTest
+import javax.sql.rowset.Joinable
 
 case class ParameterisedTypes() {
 
@@ -48,7 +49,25 @@ object testParameterisedTypes extends App {
   AtomicTest.any2Atomic(ParameterisedTypes().explicitSet(Vector(10.0, 20.0, 10.0))).is(Set(10.0, 20.0))
   AtomicTest.any2Atomic(ParameterisedTypes().explicitSet(Vector(1, 2, 3, 2, 3, 4))).is(Set(1.0, 2.0, 3.0, 4.0))
 
+  // Q20
   AtomicTest.any2Atomic(ParameterisedTypes().str).is("1,2,3,4,")
+  
+  // Q21
+  val dogYears = (x:Int) => x*7;
+  AtomicTest.any2Atomic(dogYears(10)).is(70);
+
+  // Q22
+  var s = ""
+  val v = Vector(1, 5, 7, 8)
+  v.foreach( (x: Int) => s += (dogYears(x) + " ") )
+  AtomicTest.any2Atomic(s).is("7 35 49 56 ")
+  
+  // Q23
+  s = ""
+  val numbers = Vector(1, 2, 5, 3, 7)
+  numbers.foreach( (x: Int) => s += x*x + " " )
+  AtomicTest.any2Atomic(s).is("1 4 25 9 49 ")
+  
   
 
 }
